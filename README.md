@@ -8,4 +8,4 @@
 
 * git clone https://github.com/WolfGirlM/EchartsDemos.git
 * npm install
-* npm run serve                                  
+* npm run serve 

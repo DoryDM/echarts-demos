@@ -9,6 +9,16 @@ export default new Router({
       path: '/',
       name: 'Login',
       component: () => import('./views/simpleCharts/index.vue')
+    },
+      {
+        path: '/customizeChart',
+        name: 'customizeChart',
+        component: () => import('./views/simpleCharts/customizeChart.vue')
+    },
+    {
+      path: '/customizeChart2',
+      name: 'customizeChart',
+      component: () => import('./views/simpleCharts/customizeChart2.vue')
     }
   ]
 })
