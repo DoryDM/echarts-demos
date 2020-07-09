@@ -1,10 +1,10 @@
 <template>
   <div>
-    <p>设置全局颜色</p>
+    <p>设置系列的颜色</p>
     <div ref="echarts" class="simpleDemo">
     </div>
-      <div>
-        <router-link to="/">返回主页</router-link>
+    <div>
+      <router-link to="/">返回主页</router-link>
     </div>
   </div>
 </template>
@@ -17,36 +17,34 @@ import echarts from 'echarts'
         chart: null,
         option:  {
             title: {
-                text: '自定义柱状图'
+                text: 'Biu~简单柱状图示例'
             },
             tooltip: {},
             legend: {
-                data:['销量','支出','收入']
+                data:['销量']
             },
             xAxis: {
                 data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
             },
             yAxis: {},
-            series: [{
+            series: {
                 name: '销量',
                 type: 'bar',
-                data: [30, 20, 36, 40, 50, 60],
-        
-            },
-            {
-                name: '支出',
-                type: 'bar',
-                data: [200, 310, 120, 320, 200, 100],
-               
-            },
-            {
-                name: '收入',
-                type: 'bar',
-                data: [100, 200, 600, 300, 400, 800],
-               
-            }
-            ],
-            color: ['#66FF99','#FFFF00','#FF00FF'],
+                data: [5, 20, 36, 10, 10, 20],
+                itemStyle: {
+                  color: function(params) {
+                    let colorList = ['#00FFFF','#C0C0C0','#FFFF00','#66FF99','#000000','#FF0000']
+                    return colorList[params.dataIndex]
+                  }
+                },
+              emphasis: {
+                 itemStyle: {
+                  
+              
+                }
+              }
+             },
+           
         }
       }
     },
@@ -68,6 +66,12 @@ import echarts from 'echarts'
   width: 600px;
   height:400px;
   margin: 0 auto;
+}
+a {
+  color: #00CC66	;
+}
+.router-link-active {
+  text-decoration: none;
 }
 </style>
 

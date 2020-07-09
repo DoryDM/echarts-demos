@@ -8,17 +8,22 @@ export default new Router({
   routes: [{
       path: '/',
       name: 'Login',
-      component: () => import('./views/simpleCharts/index.vue')
-    },
-      {
-        path: '/customizeChart',
-        name: 'customizeChart',
-        component: () => import('./views/simpleCharts/customizeChart.vue')
+      component: () => import('./views/index.vue')
     },
     {
-      path: '/customizeChart2',
-      name: 'customizeChart',
-      component: () => import('./views/simpleCharts/customizeChart2.vue')
+      path: '/setColorChart',
+      name: 'setColorChart',
+      component: () => import('./views/simpleChart/setChartColor.vue')
+    },
+    {
+      path: '/setColorChart2',
+      name: 'setColorChart2',
+      component: () => import('./views/simpleChart/setChartColor2.vue')
+    },
+    {
+      path: '/customChart',
+      name: 'customChart',
+      component: () => import('./views/customChart/customChartIcon.vue')
     }
   ]
 })

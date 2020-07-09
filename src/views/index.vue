@@ -1,9 +1,14 @@
 <template>
   <div>
-    <p> 设置系列的颜色</p>
+    <p> Echarts demos</p>
     <div ref="echarts" class="simpleDemo">
     </div>
-  
+    <div>
+      <p>其它例子</p>
+      <router-link to="/setColorChart">全局设置颜色</router-link><br/>
+      <router-link to="/setColorChart2">设置指定系列的颜色</router-link><br/>
+      <router-link to="/customChart">自定义系列-根据数据渲染不同图标</router-link>
+    </div>
   </div>
 </template>
 
@@ -29,19 +34,8 @@ import echarts from 'echarts'
                 name: '销量',
                 type: 'bar',
                 data: [5, 20, 36, 10, 10, 20],
-                itemStyle: {
-                  color: function(params) {
-                    let colorList = ['#00FFFF','#C0C0C0','#FFFF00','#66FF99','#000000','#FF0000']
-                    return colorList[params.dataIndex]
-                  }
-                },
-              emphasis: {
-                 itemStyle: {
-                  
-              
-                }
-              }
-             },
+                color: ['#66FF99'],
+            },
            
         }
       }
