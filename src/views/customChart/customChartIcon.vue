@@ -23,8 +23,10 @@ export default {
     init() {
       let renderItem = function(params, api) {
         let point = api.coord([api.value(0), api.value(1)]);
+        //根据data中的数据指定需要渲染的图标
         if (api.value(0) == 1) {
           return {
+            //图标类型为path类型，通过SVG代码引入第三方图标
             type: "path",
             shape: {
               pathData:
