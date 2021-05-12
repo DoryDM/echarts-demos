@@ -12,7 +12,7 @@ import echarts from "echarts";
 export default {
   data() {
     return {
-      chart: null,
+      chart: null
     };
   },
   mounted() {
@@ -119,7 +119,7 @@ export default {
           yAxisIndex: 1,
           data: [1, 2, 3, 4, 5],
           itemStyle: {
-            color: "#2D8CF0",
+            color: "#2D8CF0"
           },
         },
       ];
@@ -148,7 +148,7 @@ export default {
           itemWidth: 30,
           itemHeight: 10,
           textStyle: {
-            fontSize: 16,
+            fontSize: 16
           },
         },
         // y轴配置
@@ -159,12 +159,12 @@ export default {
             type: "value",
             nameLocation: "end",
             axisLabel: {
-              formatter: "{value}",
+              formatter: "{value}"
             },
             splitLine: {
-              show: false,
+              show: false
             },
-            interval: 10,
+            interval: 10
           },
           {
             // 自定义系列

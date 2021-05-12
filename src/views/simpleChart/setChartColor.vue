@@ -51,12 +51,12 @@ import echarts from 'echarts'
       }
     },
     mounted() {
-      this.getPage()
+      this.getPage();
     },
     methods: {
       getPage() {
         this.chart = echarts.init(this.$refs.echarts);
-        // 使用刚指定的配置项和数据显示图表。
+        // 使用指定的配置项和数据展示图表
         this.chart.setOption(this.option);
       }
     }

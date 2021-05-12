@@ -36,20 +36,14 @@ import echarts from 'echarts'
                     let colorList = ['#00FFFF','#C0C0C0','#FFFF00','#66FF99','#000000','#FF0000']
                     return colorList[params.dataIndex]
                   }
-                },
-              emphasis: {
-                 itemStyle: {
-                  
-              
                 }
-              }
              },
            
         }
       }
     },
     mounted() {
-      this.getPage()
+      this.getPage();
     },
     methods: {
       getPage() {
