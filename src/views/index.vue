@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="mainContainer">
     <p> Echarts demos</p>
-    <div ref="echarts" class="simpleDemo">
+    <div ref="echarts" class="chartContain">
     </div>
     <div>
       <p>其它例子</p>
@@ -54,10 +54,14 @@ import * as echarts from 'echarts';
 </script>
 
 <style scoped>
-.simpleDemo {
+.mainContainer {
   width: 600px;
-  height:400px;
+  height: 400px;
   margin: 0 auto;
+}
+.chartContain {
+  width: 100%;
+  height: 100%;
 }
 a {
   color: #00CC66	;

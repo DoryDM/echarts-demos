@@ -1,6 +1,6 @@
 <template>
-  <div class="contain">
-    <div id="customPracticeOne" style="width:100%;height:100%;"></div>
+  <div class="mainContainer">
+    <div ref="echarts" class="chartContain" ></div>
     <div>
       <router-link to="/">返回主页</router-link>
     </div>
@@ -16,7 +16,7 @@ export default {
     };
   },
   mounted() {
-    this.chart = echarts.init(document.getElementById("customPracticeOne"));
+    this.chart = echarts.init(this.$refs.echarts);
     this.init();
   },
   methods: {
@@ -188,8 +188,13 @@ export default {
 };
 </script>
 <style scoped>
-.contain {
+.mainContainer {
   width: 90vw;
   height: 80vh;
+  margin: 0 auto;
+}
+.chartContain {
+  width: 100%;
+  height: 100%;
 }
 </style>

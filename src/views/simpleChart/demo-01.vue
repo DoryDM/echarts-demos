@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="mainContainer">
     <p>设置全局颜色</p>
-    <div ref="echarts" class="simpleDemo">
+    <div ref="echarts" class="chartContain">
     </div>
     <div>
       <router-link to="/">返回主页</router-link>
@@ -64,10 +64,14 @@ import * as echarts from 'echarts';
 </script>
 
 <style scoped>
-.simpleDemo {
+.mainContainer {
   width: 600px;
-  height:400px;
+  height: 400px;
   margin: 0 auto;
+}
+.chartContain {
+  width: 100%;
+  height: 100%;
 }
 </style>
 

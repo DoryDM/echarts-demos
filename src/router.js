@@ -13,12 +13,12 @@ export default new Router({
     {
       path: '/setColorChart',
       name: 'setColorChart',
-      component: () => import('./views/simpleChart/setChartColor/demo-01')
+      component: () => import('./views/simpleChart/demo-01')
     },
     {
       path: '/setColorChart2',
       name: 'setColorChart2',
-      component: () => import('./views/simpleChart/setChartColor/demo-02.vue')
+      component: () => import('./views/simpleChart/demo-02.vue')
     },
     {
       path: '/customChart',
